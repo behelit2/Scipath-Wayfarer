@@ -12,7 +12,7 @@ PLAY NOW
 https://behelit2.github.io/Scipath-Wayfarer/
 
 
-QUICK START — ONE FILE
+QUICK START - ONE FILE
 ===
 
 Scipath Wayfarer is the complete game in a single `index.html` file. There is
@@ -1655,21 +1655,21 @@ For hero level H above 1:
 DIFFICULTY-SPECIFIC ENEMY FORMULAS
 -------------------------------------------------------------------------------
 
-  EASY — WANDERER
+  EASY - WANDERER
     • Ordinary attack: 4 + 2.2L
     • Ordinary gold: 5 + 3.5L
     • Boss attack: 8 + 2.8L
     • Boss gold: 42 + 24L
     • Item-price base: 8 + 4L
 
-  NORMAL — ADVENTURER
+  NORMAL - ADVENTURER
     • Ordinary attack: 4.5 + 2.475L
     • Ordinary gold: 3.75 + 2.6L
     • Boss attack: 9 + 3.1L
     • Boss gold: 31 + 18.5L
     • Item-price base: 10 + 5L
 
-  HARD — WAYFARER
+  HARD - WAYFARER
     • Ordinary attack: 5 + 2.75L
     • Ordinary gold: 2.5 + 1.7L
     • Boss attack: 10 + 3.4L
@@ -1799,7 +1799,7 @@ ARMOR CATALOG SIZE
 
 Let B be the difficulty-specific item-price base for regional level L.
 
-TRAVEL PROVISIONS — 200 UNITS
+TRAVEL PROVISIONS - 200 UNITS
 -------------------------------------------------------------------------------
 
   • Effect: +200 provisions
@@ -2412,15 +2412,15 @@ ROUTE TYPES
         Materials
         Security
 
-  GUARDED LINK — RADIUS 1
+  GUARDED LINK - RADIUS 1
     • Capacity: 6 per pressure
     • Base reliability: 0.925
 
-  GUARDED LINK — RADIUS 2
+  GUARDED LINK - RADIUS 2
     • Capacity: 7 per pressure
     • Base reliability: 0.950
 
-  GUARDED LINK — RADIUS 3
+  GUARDED LINK - RADIUS 3
     • Capacity: 8 per pressure
     • Base reliability: 0.975
 
