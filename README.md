@@ -4,7 +4,7 @@
 ===
 
 Created by Matthew Taraschke
-Version 0.99 Beta · 2026
+Version 1.0 · 2026
 
 
 PLAY NOW
