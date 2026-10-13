@@ -1,4 +1,5 @@
 ===========================================
+
                            SCIPATH WAYFARER 🌍
        A PROCEDURAL POST-APOCALYPTIC RPG WITH A LIVING CIVILIZATION
 ===========================================
