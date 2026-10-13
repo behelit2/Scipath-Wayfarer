@@ -6,12 +6,38 @@
 Created by Matthew Taraschke
 Version 1.0 · 2026
 
-
 PLAY NOW
 ===
 
 https://behelit2.github.io/Scipath-Wayfarer/
 
+
+QUICK START — ONE FILE
+===
+
+Scipath Wayfarer is the complete game in a single `index.html` file. There is
+nothing to install or build, and there are no packages or separate audio files.
+
+With Python 3 installed, open a terminal in the directory containing
+`index.html` and run:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+http://localhost:8000/
+
+That is the entire local launch process. Python only serves the file; the game,
+styles, programmatic artwork, Instruction Manual, and audio are contained in
+the HTML.
+
+On Windows, if `python` is not available as a command, use:
+
+```powershell
+py -m http.server 8000
+```
 
 THE SHORT VERSION
 ===
@@ -50,7 +76,7 @@ CONTENTS
   05. Complete Procedural Generation Atlas
   06. Persistence and Portable Saves
   07. Running and Hosting
-  08. Audio Assets
+  08. Embedded Audio
   09. Credits
 
 
@@ -113,9 +139,9 @@ persistent civilization-building simulation.
 ===
 
 Scipath Wayfarer uses a purpose-built engine written in vanilla JavaScript.
-The world, interface, combat, simulation, rendering, journals, save system, and
-game logic live inside one self-contained HTML entry point. Audio files sit
-beside it.
+The world, interface, combat, simulation, rendering, journals, save system,
+game logic, styles, Instruction Manual, and Base64-embedded audio live inside
+one self-contained HTML entry point.
 
 There is no framework, server-side game process, database, installer, or build
 pipeline. The browser runs the complete game.
@@ -207,9 +233,9 @@ THE ENGINE'S MAJOR SYSTEMS
     Network Overview, and Network Chronicle.
 
   • PRESENTATION
-    Canvas-rendered terrain and landmarks, responsive interface panels,
-    programmatic icons, combat telegraphs, journals, and the illustrated
-    in-game Instruction Manual.
+    Canvas-rendered terrain, smooth supersampled programmatic vector art for
+    non-biome map objects, responsive interface panels, combat telegraphs,
+    journals, and the illustrated in-game Instruction Manual.
 
   • AUDIO
     Combat effects, sequential impacts, sea music, radio broadcasts, and one
@@ -2118,12 +2144,12 @@ RADIO CONFIGURATION SPACE
   = 12 persistent configurations per tower
 
 
-RADIO SONG FILES
+RADIO SONG SOURCES
 -------------------------------------------------------------------------------
 
-  • Song 1 → Signal.mp3
-  • Song 2 → Signal2.mp3
-  • Song 3 → Signal3.mp3
+  • Song 1 → AUDIO_SOURCES.signal1 (embedded MP3)
+  • Song 2 → AUDIO_SOURCES.signal2 (embedded MP3)
+  • Song 3 → AUDIO_SOURCES.signal3 (embedded MP3)
 
 
 BROADCAST SELECTION
@@ -3478,68 +3504,62 @@ SAVE BEHAVIOR
 07. RUNNING AND HOSTING
 ===
 
-Scipath Wayfarer is a static client-side web project.
+Scipath Wayfarer is a single-file static client-side web project. The local
+Python launch command is in QUICK START at the top of this README.
 
-No installation, compilation, package manager, application server, or database
-is required.
-
-
-LOCAL PREVIEW
--------------------------------------------------------------------------------
-
-From the published game directory:
-
-  python -m http.server 8000
-
-Then open:
-
-  http://localhost:8000/
+No installation, compilation, package manager, application server, database,
+or separate asset directory is required.
 
 
 GITHUB PAGES
 -------------------------------------------------------------------------------
 
-Publish the directory containing:
-
-  • The HTML entry point
-  • All adjacent audio assets
+Publish `index.html` at the site root. No asset directory or build command is
+required. That one file contains the CSS, JavaScript, Instruction Manual,
+programmatic artwork, and Base64-embedded audio.
 
 World generation, combat, rendering, settlement simulation, reconstruction,
 politics, trade, airships, dialogue, and persistence all run in the browser.
 
 
 ===
-08. AUDIO ASSETS
+08. EMBEDDED AUDIO
 ===
 
-  hit.wav
+Every audio asset is stored once inside `index.html` as a Base64 data URL.
+There are no external audio files to download, copy, or deploy.
+
+  hit (embedded WAV)
     Combat impact
 
-  die.wav
+  die (embedded WAV)
     Defeat
 
-  item.wav
+  item (embedded WAV)
     Item and component feedback
 
-  discover.wav
+  discover (embedded WAV)
     Discovery feedback
 
-  levelup.wav
+  levelup (embedded WAV)
     Level advancement and completed construction
 
-  airship.wav
-    Sequentially repeating airship engine
+  airship (embedded WAV)
+    Continuous airship engine loop
 
-  Sea_Travel.mp3
+  boss (embedded WAV)
+    Regional-boss victory
+
+  seaTravel (embedded MP3)
     Sea-travel music
 
-  Signal.mp3
+  signal1 (embedded MP3)
     Radio Song 1
 
-  Signal2.mp3
+  signal2 (embedded MP3)
     Radio Song 2
 
-  Signal3.mp3
+  signal3 (embedded MP3)
     Radio Song 3
 
 
@@ -3547,7 +3567,7 @@ AUDIO ENGINE FEATURES
 -------------------------------------------------------------------------------
 
   • Sequential combat impacts
-  • Dedicated discovery and advancement effects
+  • Dedicated discovery, advancement, and regional-boss victory effects
   • Continuous sea music
   • One persistent airship engine loop
   • Geographic radio-source selection
