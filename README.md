@@ -41,6 +41,10 @@ On Windows, if `python` is not available as a command, use:
 py -m http.server 8000
 ```
 
+iPhone - iOS USERS (SOUND EFFECTS BUG)
+===
+There is a bug present on iPhones that prevents sound effects from triggering when you start a game. This can be quickly resolved/worked around by entering a boat or activating a radio tower. Then the sound should work perfectly.
+
 THE SHORT VERSION
 ===
 
