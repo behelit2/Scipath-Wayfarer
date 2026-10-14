@@ -1,3 +1,5 @@
+<img width="2555" height="1215" alt="image" src="https://github.com/user-attachments/assets/bdcdc828-b215-4b0c-9d2e-642be15e5909" />
+
 ===
                            SCIPATH WAYFARER 🌍
        A PROCEDURAL POST-APOCALYPTIC RPG WITH A LIVING CIVILIZATION
