@@ -5,8 +5,8 @@
        A PROCEDURAL POST-APOCALYPTIC RPG WITH A LIVING CIVILIZATION
 ===
 
-Created by Matthew Taraschke ·
-Version 1.0 · 2026
+Created by Matthew Taraschke
+· Version 1.0 · 2026
 
 PLAY NOW
 ===
